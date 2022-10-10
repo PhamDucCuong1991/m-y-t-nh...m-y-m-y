@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kt năm nhuận</title>
+</head>
+<h2>Kiểm tra năm nhuận</h2>
+<body>
+<script>
+ let nam = +prompt("Nhập năm")
+if (nam%4==0){
+    if (nam%100==0){
+        if (nam%400==0){
+            alert("Đây là năm nhuận")
+        }
+        else {alert("Đây không phải là năm nhuận")}
+    }
+    else {alert("Đây là năm nhuận")}
+}
+else {alert("Đây không phải là năm nhuận")}
+
+
+</script>
+</body>
+</html>

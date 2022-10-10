@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập</title>
+</head>
+<h2>Chuyển đổi tiền tệ</h2>
+<body>
+<input type="text" size="34px" placeholder="Nhập số tiền" id="money">      </br>
+<select id="cot1">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+    <option value="165">Yên Nhật</option>
+    <option value="16000">Đô la Úc</option>
+    <option value="1.3">Kip laos</option>
+    <option value="30000">bảng Anh</option>
+    <option value="4000">Nhân dân tệ</option>
+    <option value="4500">Rupi Nga</option>
+    <option value="25000">Euro</option>
+
+</select>
+<select id="cot2">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+    <option value="165">Yên Nhật</option>
+    <option value="16000">Đô la Úc</option>
+    <option value="1.3">Kip laos</option>
+    <option value="30000">bảng Anh</option>
+    <option value="4000">Nhân dân tệ</option>
+    <option value="4500">Rupi Nga</option>
+    <option value="25000">Euro</option>
+</select>
+<tr>
+    <button onclick="Chuyển()">Chuyển</button>
+    <p id="doitien"></p>
+    <button onclick="tygia()">Tỷ giá hối đoái</button>
+    <p id="tygia"></p>
+</tr>
+
+</body>
+<script>
+  function Chuyển(){
+      let money =+document.getElementById("money").value;
+      let cot1 =+document.getElementById("cot1").value;
+      let cot2 =+document.getElementById("cot2").value;
+      let ketqua = money*(cot1/cot2);
+      document.getElementById("doitien").innerHTML = "Kết quả: "+ketqua
+  }
+
+  function tygia(){
+      let cot1 =+document.getElementById("cot1").value;
+      let cot2 =+document.getElementById("cot2").value;
+      let ketqua = cot1/cot2;
+      document.getElementById("tygia").innerHTML = "Kết quả: "+ketqua
+  }
+
+</script>
+
+
+</html>

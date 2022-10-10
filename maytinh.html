@@ -18,28 +18,28 @@
 <script>
 
     function cong(){
-        let a=parseInt(document.getElementById("a").value)
-        let b=parseInt(document.getElementById("b").value)
+        let a=+(document.getElementById("a").value)
+        let b=+(document.getElementById("b").value)
         let tong=a+b
-        document.getElementById("KQ").innerHTML='Kết quả: '+tong
+        document.getElementById("KQ").innerHTML=tong
     }
     function tru(){
-        let a=parseInt(document.getElementById("a").value)
-        let b=parseInt(document.getElementById("b").value)
+        let a=+(document.getElementById("a").value)
+        let b=+(document.getElementById("b").value)
         let tru=a-b
-        document.getElementById("KQ").innerHTML='Kết quả: '+tru
+        document.getElementById("KQ").innerHTML=tru
 
     }function nhan(){
-        let a=parseInt(document.getElementById("a").value)
-        let b=parseInt(document.getElementById("b").value)
+        let a=+(document.getElementById("a").value)
+        let b=+(document.getElementById("b").value)
         let nhan=a*b
 
-        document.getElementById("KQ").innerHTML='Kết quả: '+nhan
+        document.getElementById("KQ").innerHTML=nhan
     }
     function chia(){
-        let a=parseInt(document.getElementById("a").value)
-        let b=parseInt(document.getElementById("b").value)
+        let a=+(document.getElementById("a").value)
+        let b=+(document.getElementById("b").value)
         let chia=a/b
-        document.getElementById("KQ").innerHTML='Kết quả: '+chia
+        document.getElementById("KQ").innerHTML=chia
     }
 </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nobita yêu Xuka</title>
+</head>
+<body onload="docReady()">
+<img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
+     style="position:absolute;left:200px; top:200px;" height="100" width="80"/>
+<script>
+  function nobitaup() {
+    let element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) - 5+'px';
+  }
+  function nobitadown() {
+    var element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) + 5+'px';
+  }
+  function nobitaleft() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) -5+'px'
+  }
+  function nobitaright() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) +5+'px'
+  }
+  function moveSelection(evt) {
+    switch (evt.keyCode) {
+      case 37:
+       nobitaleft();
+        break;
+      case 39:
+        nobitaright();
+        break;
+      case 38:
+        nobitaup();
+        break;
+      case 40:
+        nobitadown();
+        break;
+    }
+  }
+          function docReady(){
+    window.addEventListener('keydown',moveSelection);
+}
+
+
+</script>
+</body>
+</html>

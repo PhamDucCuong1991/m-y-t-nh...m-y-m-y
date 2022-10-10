@@ -49,15 +49,13 @@ Tính trung bình
 <button type="button"onclick="chuvi()">
 
     Chu vi
-    <p id="KQCV"></p>
 </button>
-
+<p id="KQCV"></p>
 <button type="button"onclick="dientich()">
 
     Diện tích
-    <p id="KQDT"></p>
 </button>
-
+<p id="KQDT"></p>
 
 
 
@@ -71,18 +69,21 @@ Tính trung bình
         document.getElementById("KQ").innerHTML="Điểm trung bình: "+TB.toString()
     }
 function doF() {
-    let C=parseInt(document.getElementById("nhapdo").value)
+    let C=+(document.getElementById("nhapdo").value)
     let F=(C/5)*9+32
     document.getElementById("KQD").innerHTML="Kết quả: "+F
 }
 function chuvi(){
-        let R=parseInt(document.getElementById("nhapbk").value)
+        let R=+(document.getElementById("nhapbk").value)
     let C=(R*2)*3.14
-    let S=R*R*3.14
+
     document.getElementById("KQCV").innerHTML="Kết quả: "+C
+}
+function dientich(){
+    let R=+(document.getElementById("nhapbk").value)
+    let S=R*R*3.14
     document.getElementById("KQDT").innerHTML="Kết quả: "+S
 }
-
 </script>
 
 </body>
