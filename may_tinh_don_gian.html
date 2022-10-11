@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn giản</title>
+</head>
+<h2>Máy tính đơn giản</h2>
+<body>
+<table>
+  <input type="text" id="NhapSo" size="8">      </br>
+  <button type="button" value="1" onclick="inputValue(this.value)" id="1">1</button>
+  <button type="button" value="2" onclick="inputValue(this.value)" id="2">2</button>
+  <button type="button" value="3" onclick="inputValue(this.value)" id="3">3</button>
+  <button type="button" value="+" onclick="inputValue(this.value)" id="+">+</button>       </br>
+
+  <button type="button" value="4" onclick="inputValue(this.value)" id="4">4</button>
+  <button type="button" value="5" onclick="inputValue(this.value)" id="5">5</button>
+  <button type="button" value="6" onclick="inputValue(this.value)" id="6">6</button>
+  <button type="button" value="-" onclick="inputValue(this.value)" id="-">-</button>      </br>
+
+  <button type="button" value="7" onclick="inputValue(this.value)" id="7">7</button>
+  <button type="button" value="8" onclick="inputValue(this.value)" id="8">8</button>
+  <button type="button" value="9" onclick="inputValue(this.value)" id="9">9</button>
+  <button type="button" value="*" onclick="inputValue(this.value)" id="*">x</button>       </br>
+
+  <button type="button" value="C" onclick="C()" id="C">C</button>
+  <button type="button" value="0" onclick="inputValue(this.value)" id="0">0</button>
+  <button type="button" value="kq" onclick="kq()" id="ketqua">=</button>
+  <button type="button" value="/" onclick="inputValue(this.value)" id="/">/</button>
+</table>
+<script>
+  function inputValue(value) {
+    document.getElementById('NhapSo').value += value;
+  }
+
+  function C() {
+    view.value ="";
+  }
+  function kq() {
+    let ketqua = eval(NhapSo.value);
+    NhapSo.value = ketqua;
+  }
+</script>
+
+
+</body>
+
+</html>
