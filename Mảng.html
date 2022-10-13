@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [5, 7, 9, 4, 11, 15, 15];
+    let max1 = a[0];
+    let max2 = a[0];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max1) {
+            max1 = a[i];
+        }
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max2 && a[i] != max1) {
+            max2 = a[i];
+        }
+    }
+
+    document.write(max2);
+
+
+</script>
+</body>
+</html>
+<!--/**-->
+<!--let a =[5,7,9,4,11,15];-->
+<!--let max = a[0];-->
+<!--for (let i=0; i<a.length; i++){-->
+<!--if (a[i]>max){-->
+<!--max = a[i];-->
+<!--}-->
+<!--} document.write(max + " là số lớn nhất trong mảng"+ "<br>");-->
+
+<!--let min = a[0];-->
+<!--for (let i=0; i<a.length; i++){-->
+<!--if (a[i]<min){-->
+<!--min = [i];-->
+<!--}-->
+<!--}document.write(min + " là số nhỏ nhất trong mảng");-->
+<!--*/-->

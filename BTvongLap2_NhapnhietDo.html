@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <h3>Sử dụng prompt () function để lấy hiện nhiệt độ thông tin được nhập bởi người truy cập.<br>
+    Nếu nhiệt vào 100, yêu cầu của người dân sử dụng để giảm nhiệt.<br>
+    If nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ</h3>
+</head>
+<body>
+<script>
+    let temp ;
+    do {
+        temp =+prompt("nhập vào nhiệt độ")
+        if (temp < 20) {
+            alert("Nhiệt độ quá thấp, xin nhập lại")}
+        if (temp > 100) {
+            alert(" Nhiệt độ quá cao, xin nhập lại")
+        }
+    }
+    while (temp<20 || temp>100);
+    document.write("Nhiệt độ được chấp nhận")
+
+
+</script>
+
+</body>
+</html>

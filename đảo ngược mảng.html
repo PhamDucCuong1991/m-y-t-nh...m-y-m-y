@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+  let mang1 = [ 1,2,3];
+  let mang2=[]
+  let i=0;
+  let j=0;
+  for(i= mang1.length-1,j=0;i>=0;i--,++j)
+  {
+    mang2[i]=mang1[j]
+  }
+  mang1=mang2
+  alert(mang1)
+
+</script>
+</body>
+</html>
