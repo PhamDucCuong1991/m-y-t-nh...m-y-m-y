@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+
+        </style>
+</head>
+
+<body>
+<!--//Câu 1-->
+<!--//Cho danh sách các điểm thi ở trong một mảng. Hãy viết hàm findAvg()-->
+<!--//với đầu vào là một mảng điểm và đầu ra là điểm trung bình của danh sách điểm thi.-->
+<canvas id="veHinhChuNhat" width="500" height="600" ></canvas>
+<canvas id="veHinhTron" width="500px" height="600px" ></canvas>
+
+    <script>
+
+        let diemTb = 0;
+        let tong = 0;
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        function findAvg() {
+            for (let i = 0; i < arr.length; i++) {
+                tong = tong + arr[i];
+                diemTb = tong / arr.length;
+            }
+            console.log(diemTb)
+        }
+        findAvg()
+
+        <!--Câu 2-->
+        <!--Viết hàm insertNumberToArray() nhận vào một mảng các số nguyên, một số nguyên x, -->
+        <!--và một số nguyên vị trí index. Hàm  trả về mảng ban đầu nếu vị trí index có giá trị -->
+        <!--nhỏ hơn 0 hoặc lớn hơn chiều dài mảng. Nếu không thì trả về mảng mới đã được thêm số x vào vị trí index.-->
+
+        let arr = [1, 2, 3, 4, 5, 6];
+        let indexx = +prompt("nhập vị trí");
+        let songuyen = +prompt("Nhập số bất kỳ");
+
+        function insertNumberToArray(arr, songuyen, indexx) {
+            if (indexx < 0 || indexx > arr.length) {
+                alert(arr);
+            } else {
+                arr.splice(indexx, 0, songuyen);
+                alert(arr);
+            }
+        }
+        insertNumberToArray(arr, songuyen, indexx);
+
+        // Câu 3
+        // Viết hàm sumOfListPrime() nhận vào một số nguyên x , hàm trả về giá trị là
+        // tổng các số nguyên tố từ 0 cho tới x.
+
+
+        let sum = 0;
+        let x = +prompt('nhap so x')
+        function sumOfListPrimef() {
+            for (let j = 2; j <= x; j++) {
+                let count = 0;
+                for (let i = 2; i < j; i++) {
+                    if (j % i === 0) {
+                        count = 1
+                    }
+                }
+                if (count === 0) {
+                    sum = sum + j
+                    document.write(j+" ")
+                }
+            }
+        }
+        sumOfListPrimef()
+        document.write("<br>"+sum)
+
+        // bai 4: Hãy viết một chương trình để biểu diễn hình chữ nhật,
+        //         với mô tả của lớp hình chữ nhật như sau:
+        //         - x: Toạ độ x
+        //     - y: Toạ độ y
+        //     -width: chiều dài
+        //     - height: chiều rộng
+        //     - color: Màu sắc (sử dụng max hex)
+        //     + render(canvas): Hiển thị hình chữ nhật trên một canvas
+
+        var canvas = document.getElementById("veHinhChuNhat");
+        if (canvas.getContext) {
+            var chuNhat = canvas.getContext("2d");
+            chuNhat.fillStyle = 'basic';    // color of fill
+            chuNhat.fillRect(100, 100, 300, 200); // create rectangle
+        }
+
+        function Circle(x, y, radius){
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        function createCircle(){
+            var ctx = document.getElementById("veHinhTron").getContext("2d");
+            var circle= new Circle(100, 100, 80);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        createCircle();
+
+    </script>
+
+
+</body>
+
+</html>
